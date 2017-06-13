@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+    - "8082:8080"
+  links:
+    - db
+db:
+  image: couchbase/server
+  ports:
+    - "8091:8091"
